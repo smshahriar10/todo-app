@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. **Clone the repository:**
 
-Currently, two official plugins are available:
+`git clone https://github.com/smshahriar10/todo-app.git`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Navigate to the project directory:**
 
-## Expanding the ESLint configuration
+`cd todo-app`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+3. **Install dependencies:**
 
-- Configure the top-level `parserOptions` property like this:
+`pnpm install`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. **Start the development server:**
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+`pnpm run dev`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+5. **Open the application:**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Visit [http://localhost:5173](http://localhost:5173) in your browser to view the To-Do app.
+
+6. **Build for production:**
+
+`pnpm run build`
+
+7. **Preview the production build:**
+
+`pnpm run preview`
+
+---
+
+## Features:
+
+- **Add Tasks**: Add new tasks to your to-do list.
+- **Edit Tasks**: Update the title of existing tasks.
+- **Mark as Completed**: Mark tasks as completed with a checkbox.
+- **Delete Tasks**: Remove tasks from the list with the delete button.
+- **Responsive Design**: The app is responsive and works well on different screen sizes.
+
+---
+
+## Tech Stack:
+
+- **React**: Frontend framework
+- **TypeScript**: Type-safe JavaScript
+- **Tailwind CSS**: Utility-first CSS framework
+- **Vite**: Build tool for faster development
+- **PNPM**: Fast, disk space efficient package manager
+
+---
+
+## License:
+
+This project is licensed under the MIT License.
