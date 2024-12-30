@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TodoList from "./components/TodoList";
+import Confetti from "react-confetti";
 
 const App: React.FC = () => {
   const [newTask, setNewTask] = useState<string>("");
@@ -39,9 +40,14 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="max-w-[600px] mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <h1 className="text-2xl font-bold mb-4">Todo List</h1>
+    <div className="relative min-h-screen bg-white">
+      {/* Confetti effect */}
+      <Confetti width={window.innerWidth} height={window.innerHeight} numberOfPieces={100} gravity={0.1} />
+
+      <div className="max-w-[600px] mx-auto bg-white p-6 rounded-lg shadow-lg mt-10 relative z-10">
+        <h1 className="text-4xl font-bold mb-4 text-center text-blue-600 animate__animated animate__zoomIn animate__delay-1s">
+          Happy New Year 2025! 🎉
+        </h1>
         <div className="flex mb-4">
           <input
             type="text"
